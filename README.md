@@ -23,25 +23,6 @@ PawGuard is a mobile application designed to revolutionize animal welfare throug
 - **Firebase Cloud Messaging**: Push notifications for emergency alerts and updates.
 - **Payment Gateway API**: For handling secure donations and crowdfunding contributions.
 
-## 🔒 Authentication
-
-- JWT / OAuth2 secure login and token-based access.
-
-## 📦 Architecture
-
-- Modular Flutter UI
-- RESTful API consumption
-- Real-time data updates
-- Clean and maintainable codebase
-
-## 🆘 Rescue Workflow
-
-1. User reports an animal in need with image and location.
-2. Case appears on a live map.
-3. Alerts are sent to rescue teams.
-4. Status and progress are tracked in real-time.
-
-
 ## 👥 Team
 
 - Ananya Shailesh (23BRS1200)
