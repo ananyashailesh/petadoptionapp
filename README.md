@@ -41,11 +41,6 @@ PawGuard is a mobile application designed to revolutionize animal welfare throug
 3. Alerts are sent to rescue teams.
 4. Status and progress are tracked in real-time.
 
-## 📈 Success Metrics
-
-- Increased pet adoptions
-- Reduced rescue response times
-- Active user participation
 
 ## 👥 Team
 
