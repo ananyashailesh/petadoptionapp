@@ -1,10 +1,11 @@
-import 'package:adoption_ui_app/main/mediator/page1.dart';
+import 'package:adoption_ui_app/main/mediator/page3.dart';
 import 'package:adoption_ui_app/main/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:adoption_ui_app/theme/color.dart';
+import 'mediator/page1.dart';
 import 'mediator/page2.dart';
-import 'mediator/page3.dart';
+import 'mediator/page4.dart';
 
 class MainDashboard extends StatefulWidget {
   @override
@@ -41,7 +42,7 @@ class MainDashboardState extends State<MainDashboard> {
                   ),
                   child: PageView(
                     controller: _pageController,
-                    children: [Page1(), Page2(), Page3()],
+                    children: [Page1(), Page2(), Page3(), Page4()],
                   ),
                 ),
               ),

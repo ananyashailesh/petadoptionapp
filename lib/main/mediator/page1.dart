@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:adoption_ui_app/adoption/screens/adoption_dashboard.dart';
+import 'package:adoption_ui_app/modules/adoption/screens/adoption_dashboard.dart';
 import 'package:adoption_ui_app/theme/color.dart';
 
 class Page1 extends StatelessWidget {
@@ -19,7 +19,7 @@ class Page1 extends StatelessWidget {
                 PageRouteBuilder(
                   transitionDuration: Duration(
                     milliseconds: 300,
-                  ), // Duration of animation
+                  ),
                   pageBuilder:
                       (context, animation, secondaryAnimation) => RootApp(),
                   transitionsBuilder: (
@@ -31,9 +31,9 @@ class Page1 extends StatelessWidget {
                     return SlideTransition(
                       position: Tween<Offset>(
                         begin: Offset(
-                          0,
                           1,
-                        ), // Start position (bottom of screen)
+                          0,
+                        ), // Start position (right of screen)
                         end: Offset(0, 0), // End position (final screen)
                       ).animate(
                         CurvedAnimation(
@@ -46,9 +46,7 @@ class Page1 extends StatelessWidget {
                   },
                 ),
               );
-            
             },
-          
           ),
         ],
       ),
@@ -82,14 +80,14 @@ class Page1 extends StatelessWidget {
                 shape: BoxShape.circle,
               ),
               child: SvgPicture.asset(
-                'assets/icons/dog_page1.svg',
+                'assets/icons/emergency.svg',
                 height: 52,
                 color: AppColor.secondary,
               ),
             ),
             SizedBox(height: 28),
             Text(
-              'Adopt a Pet',
+              'Rescue a Pet',
               style: TextStyle(
                 fontSize: 26,
                 fontWeight: FontWeight.w800,
@@ -99,7 +97,7 @@ class Page1 extends StatelessWidget {
             ),
             SizedBox(height: 16),
             Text(
-              'Give a loving home to a pet in need',
+              'Help save pets in danger or those that need urgent care',
               style: TextStyle(
                 fontSize: 16,
                 color: AppColor.labelColor,
@@ -111,11 +109,11 @@ class Page1 extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                _buildIconCircle(Icons.pets),
+                _buildIconCircle(Icons.local_hospital),
                 SizedBox(width: 16),
-                _buildIconCircle(Icons.favorite),
+                _buildIconCircle(Icons.emergency),
                 SizedBox(width: 16),
-                _buildIconCircle(Icons.home),
+                _buildIconCircle(Icons.volunteer_activism),
               ],
             ),
             SizedBox(height: 32),
@@ -136,7 +134,7 @@ class Page1 extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'Find Your Pet',
+                      'Report Emergency',
                       style: TextStyle(
                         color: AppColor.cardColor,
                         fontSize: 16,

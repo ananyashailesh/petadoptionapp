@@ -1,6 +1,6 @@
-import 'package:adoption_ui_app/crowdfunding/crowdfunding_dashboard.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:adoption_ui_app/modules/marketplace/screens/marketplace_page.dart';
 import 'package:adoption_ui_app/theme/color.dart';
 
 class Page3 extends StatelessWidget {
@@ -16,7 +16,7 @@ class Page3 extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => CrowdfundingDashboard()),
+                MaterialPageRoute(builder: (context) => MarketplacePage()),
               );
             },
           ),
@@ -30,6 +30,7 @@ class Page3 extends StatelessWidget {
       onTap: onTap,
       child: Container(
         width: MediaQuery.of(context).size.width * 0.85,
+        
         padding: EdgeInsets.all(28),
         decoration: BoxDecoration(
           color: AppColor.cardColor,
@@ -52,14 +53,14 @@ class Page3 extends StatelessWidget {
                 shape: BoxShape.circle,
               ),
               child: SvgPicture.asset(
-                'assets/icons/donate.svg',
+                'assets/icons/pet_food.svg',
                 height: 52,
                 color: AppColor.secondary,
               ),
             ),
             SizedBox(height: 28),
             Text(
-              'Donate & Help',
+              'Pet Supplies',
               style: TextStyle(
                 fontSize: 26,
                 fontWeight: FontWeight.w800,
@@ -69,7 +70,7 @@ class Page3 extends StatelessWidget {
             ),
             SizedBox(height: 16),
             Text(
-              'Support animals in need with your donation',
+              'Find the best supplies for your pet',
               style: TextStyle(
                 fontSize: 16,
                 color: AppColor.labelColor,
@@ -81,11 +82,11 @@ class Page3 extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                _buildIconCircle(Icons.volunteer_activism),
+                _buildIconCircle(Icons.shopping_cart),
                 SizedBox(width: 16),
-                _buildIconCircle(Icons.pets),
+                _buildIconCircle(Icons.local_shipping),
                 SizedBox(width: 16),
-                _buildIconCircle(Icons.healing),
+                _buildIconCircle(Icons.inventory_2),
               ],
             ),
             SizedBox(height: 32),
@@ -106,7 +107,7 @@ class Page3 extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'Donate Now',
+                      'Shop Now',
                       style: TextStyle(
                         color: AppColor.cardColor,
                         fontSize: 16,
@@ -137,11 +138,7 @@ class Page3 extends StatelessWidget {
         color: AppColor.secondary.withOpacity(0.15),
         shape: BoxShape.circle,
       ),
-      child: Icon(
-        icon,
-        color: AppColor.secondary,
-        size: 24,
-      ),
+      child: Icon(icon, color: AppColor.secondary, size: 24),
     );
   }
 }
